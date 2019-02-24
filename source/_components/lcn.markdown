@@ -34,6 +34,7 @@ There is currently support for the following device types within Home Assistant:
 - [Binary Sensor](#binary-sensor)
 - [Climate](#climate)
 - [Cover](#cover)
+- [Climate](#climate)
 - [Light](#light)
 - [Sensor](#sensor)
 - [Switch](#switch)
@@ -91,7 +92,7 @@ lcn:
       address: myhome.s0.m7
       source: var3
       unit_of_measurement: °C
-  
+
   switches:
     - name: Sprinkler switch
       address: myhome.s0.m7
@@ -360,6 +361,8 @@ The [MOTOR_PORT](#ports) values specify which hardware relay configuration will 
 | LOGICOP_STATE | `not`. `or`, `and` |
 
 ### {% linkable_title Keys %}:
+
+| SENDKEYCOMMANDS | `hit`, `make`, `break`, `dontsend` |
 
 Whenever a key has to be provided, it is defined by a joint string consisting of the table identifier (`a`, `b`, `c`, `d`) and the corresponding key number.
 Examples: `a1`, `a5`, `d8`.
