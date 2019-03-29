@@ -19,22 +19,22 @@ ha_category:
 ha_release: 0.85
 ha_iot_class: Local Push
 redirect_from:
+  - /components/cover.lcn/
   - /components/light.lcn/
   - /components/switch.lcn/
   - /components/cover.lcn/
 ---
 
 The `lcn` integration for Home Assistant allows you to connect to [LCN](http://www.lcn.eu) hardware devices.
-
 The component requires one unused license of the coupling software LCN-PCHK (version >2.8) and a LCN hardware coupler. Alternatively a LCN-PKE coupler can be used which offers two PCHK licenses.
 With this setup sending and receiving commands to and from LCN modules is possible.
-
 There is currently support for the following device types within Home Assistant:
 
 - [Binary Sensor](#binary-sensor)
 - [Climate](#climate)
 - [Cover](#cover)
 - [Climate](#climate)
+- [Cover](#cover)
 - [Light](#light)
 - [Sensor](#sensor)
 - [Switch](#switch)
@@ -288,13 +288,9 @@ switches:
 ## {% linkable_title LCN Addresses %}
 
 LCN hardware devices connected to the LCN bus are called _modules_. LCN modules are addressed by their numeric id in the range (5..254).
-
 Modules can be arranged in _segments_. Segments can be addressed by their numeric id (5..128) or 0 (= no segment exist) or 3 (= target all segments).
-
 LCN Modules within the _same_ segment can be grouped by their group id (5..254) or 3 (= target all groups.)
-
 The LCN component allows the connection to more than one hardware coupler. In this case it has to be specified which hardware coupler should be used for addressing the specified module.
-
 Whenever the address of a module or a group has to be specified, it can be addressed using one of the following syntaxes:
 
 Example for modules:
